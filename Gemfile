@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.3'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'bcrypt', '3.1.12'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
