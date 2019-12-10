@@ -1,1 +1,16 @@
+<% provide(:title, current_user.name) %>
 <%= @user.name %>, <%= @user.email %>
+
+<% if @user.events.any? %>
+  <h3>Events(<%= @user.events.count %>)</h3>
+
+  <ol>
+    <% @user.events.each do |event| %>
+      <h5><%= event.title %></h5>
+      <p><%= event.description %></p>
+      <p><%= event.event_date %></p>
+    <% end %>
+  </ol>
+  <% else %>
+  <p>No events</p>
+<% end %>
